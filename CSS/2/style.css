@@ -1,0 +1,131 @@
+/*
+    =>Cascading ->same specification same selector n property -> the one given the laast will be final, applies to fiels too
+    =>Selector specifity -> the weight that is applied to a given css declaration.
+                                  -> inline styles > id > class, attribute, psudo class > elemnt, psudo elemnt
+    =>
+
+*/
+
+/* Selector
+    1. universal selector -> *
+    2. element selctor -> html element name
+    3. Id selector -> element's id sttribute -> #myid
+    4. Class selector -> .myclass
+    5. Descendent selector -> outer inner elemetns/class -> we can skip multple levels
+    6. Attribute Selector -> element[attr="value'] , element[attr]
+*/ 
+
+/*
+    !important 
+    ->to show the most specific thing in the document
+    ->nothing will be wble to chnage this
+*/
+
+*{
+    font-family: "Courier New";
+}
+
+h3,h1{
+    color: #b92b27 !important;
+}
+
+#login{
+    background-color: white;
+}
+
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+
+.upvote{
+    background-color:green;
+    color: white;
+}
+
+.post a{
+    color: purple;
+    background-color: yellow;
+}
+
+nav a{
+    color: hotpink;
+}
+
+input[type="text"]{
+    color:rgb(173, 4, 251)
+}
+input[type="password"]{
+    color: green;
+}
+
+input[type]{
+    background-color: cornsilk;
+}
+
+/*
+    Combinators - to combine multiple electors
+    1. Adjacent Sibling -> +
+    2. Child Combinator -> > -> for direct descendents
+
+*/
+
+p + h3{
+    text-decoration: underline;
+}
+
+.upvote + button{
+    background-color: cadetblue;
+}
+
+div > input{
+    background-color: darksalmon;
+}
+
+/*
+    Pseudo Class 
+    -> keyword added to a selector that specifies a special state
+    -> :hover, :active, :checked :nth-of-type
+
+*/
+button:hover {
+    background-color: black;
+    color:white;
+}
+button:active {
+    background-color: hotpink;
+    color:black
+}
+p:active {
+    font-weight: bold;
+    color: green;
+}
+h3:hover {
+    text-decoration: overline;
+}
+input[type="radio"]:checked + label {
+    font-weight: bold;
+    color:red;
+}
+
+div:nth-of-type(2n){
+    background-color: antiquewhite;
+}
+
+/*
+    Pseudo element
+    -> keyword added to a selector to change a specific part 
+    -> ::first-letter, ::first-line, ::selection
+*/
+
+h1::first-letter{
+    color:plum;
+}
+
+p::first-line{
+    color:green;
+}
+
+p::selection{
+    background-color:darkkhaki;
+}

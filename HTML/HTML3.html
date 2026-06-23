@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 3</title>
+</head>
+<body>
+    
+    <h1>Tables</h1>
+<!-- table -->
+     <!-- tr, th, tc-->
+     <!-- thead, tbody, tfoot : to section content in table-->
+     <!-- rowspan, colspan: to combine cells-->
+    <table border="black">
+        <caption>Food Menu</caption>
+        <thead>
+            <tr>
+                <th rowspan="2"> </th>
+                <th colspan="2">Price</th>
+                <th colspan="2">Red eyes</th>
+            </tr>
+            <tr>
+                <th>INR</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>Samosa</td>
+                <td>15</td>
+                <td>100</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <td>Vadapav</td>
+                <td>12</td>
+                <td>90</td>
+                <td>78%</td>
+            </tr>
+            <tr>
+                <td>Chai</td>
+                <td>10</td>
+                <td>70</td>
+                <td>78%</td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td colspan="2">30</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    
+<h1>Forms</h1>
+<!-- form -->
+    <!-- action atribute: what to do when form is submited-->
+    <!-- Name attribute: name of form control -->
+    <!-- input element-->
+        <!-- type attribute -->
+        <!-- placeholder attribute-->
+        <!-- id attribute -->
+        <!-- name attribute -->
+        <!-- value attribute -->
+    <!-- label element -->
+        <!-- for attribute : for the id of the input -->
+    <!-- button element: if its cliked then it will go to href in action atriibute of form-->
+    <!-- select element -->
+        <!--attributes -> name , id -->
+        <!-- option element-->
+            <!-- value attribute-->
+    <!-- textarea element-->
+        <!-- id attribute -->
+    <form action="/action">
+        <div>
+            <label>
+                Username
+                <input type="text" placeholder="Enter name" name="username" >
+            </label>
+        </div>
+        
+        <div>
+            <label for = "password"> Enter password</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+        
+        <div>
+            <!-- We can make these outside of form too -->
+            <button type="submit">Submit</button>
+            <button type="button">hello</button>
+            <button type="reset">Reset</button>
+        </div>
+       
+        <div>
+            <!-- Input type button -->
+            <input type="button" value="Click here">
+            <input type="submit">
+            <input type="reset" value="click for reset">
+            <!-- Its prefferes to use button tag instead of input type button-->
+        </div>
+
+        <div>
+            <!-- Input type checkbox -->
+            <!-- "ckecked"- to mark the checkbox -->
+            <!-- By defalut unchecked -->
+            <input type="checkbox" name = "age" id="age" checked/>
+            <label for="age">I am 18+ </label>
+            Choose your subject: 
+            <input type="checkbox" name = "subject" id="math" value="Math"/>
+            <label for="math">Math</label>
+            <input type="checkbox" name = "subject" id="Sci"/>
+            <label for="Sci">Sci</label>
+            <input type="checkbox" name = "subject" id="SST"/>
+            <label for="SST">SST</label>
+        </div>
+
+        <div>
+            <!-- Input type radio button -->
+            <!-- only one option can be selected for the same name attribute -->
+            <input type="radio" name="fruit" id="apple">
+            <label for ="apple">Apple</label>
+            <input type="radio" name="fruit" id="banana">
+            <label for ="banana">Banana</label>
+        </div>
+          
+        <div>
+            <!-- Select element - for drop down-->
+            <!-- selected attribute: option is preselected-->
+            <select name="profession" id="profession">
+                <option>Select your option</option>
+                <option value="stu" selected>Student</option>
+                <option value="dev"> Developer</option>
+            </select> 
+        </div>
+
+        <div>
+            <!-- Input type range -->
+            <!-- min, max attribute: minimum/maximum value of range-->
+            <!-- step attribute: step size with which value should change-->
+            <!-- value attribute: default value-->
+            <label for="volume">Select volume level: </label>
+            <input type="range" min="0" max="100" step="5" value="70" name="vol" id="volume">
+        </div>
+
+        <div>
+            <label for="feedback">Provide your Feedback: </label>
+            <textarea id="feedback" rows="10" cols="15" name="feedback"></textarea>
+        </div>
+       
+    </form>
+
+<h1>Practice Q</h1>
+    <h2>Registration Form</h2>
+    <form action="\action">
+        <input type="text" placeholder="First Name" name="firstName">
+        <input type="text" placeholder="Last Name" name="lastName">
+        <br>
+        <label for="sex">Please select gender</label>
+        <select name="sex" id="sex">
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+            <option value="o">Other</option>
+        </select>
+        <br>
+        Do you agree to all terms of servies?
+        <input type="checkbox" checked name="argreement" id="agreement">
+        <label for="agreement">Yes, I agree</label>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+    <br>
+
+    <table border="black">
+        <caption>Student Information</caption>
+        
+        <tr>
+            <th rowspan="6">Info</th>
+            <th rowspan="2">Name</th>
+            <th colspan="2">Address</th>
+        </tr>
+        <tr>
+            <th>City</th>
+            <th>House</th>
+        </tr>
+
+        <tr>
+            <td>A</td>
+            <td>Delhi</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>Mumbai</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>Kolkata</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>Pune</td>
+            <td>4</td>
+        </tr>
+      
+    </table>
+
+</body>
+</html>

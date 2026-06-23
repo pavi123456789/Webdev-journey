@@ -1,0 +1,17 @@
+div{
+    background-color: antiquewhite;
+}
+form{
+    background-color: crimson;
+}
+/* input or button boxes by default does not accept inherited propertied 
+    To make them inherit specificaly do - 
+*/
+
+button, input{
+    background-color: inherit;
+}
+
+/*
+    Some properties like width, height, border etc cant be inherited
+*/

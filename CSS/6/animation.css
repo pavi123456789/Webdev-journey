@@ -1,0 +1,71 @@
+/* CSS animations
+
+Animation template -> 
+    @keyfram myName{
+        from{property: value}
+        to{property: value}
+    } 
+
+    @keyframe myName{
+        0%{property: value}
+        50%{property: value}
+        100%{property: value}
+    }
+
+Properties to implement template ->
+    animation-name, animation-duration, animation-timing-fucntion,
+     animation-delay, animation-direction, animation-iteration-count
+    -> or use shorthand
+
+-> for multiple animations wrtie everyting in one tepmplate
+*/
+
+.box{
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+
+    /* animation-name: colorAnimate;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: reverse; */
+
+    animation:colorAnimate 6s ease-in 0s infinite normal
+}
+
+@keyframes fontAnimate {
+    from{ 
+        font-size: 20px;
+    }
+    to{
+        font-size: 40px;
+    }
+}
+
+@keyframes colorAnimate {
+    0%{
+        background-color: rgb(135, 251, 135);
+    }
+    40%{
+        background-color: rgb(174, 143, 246);
+    }
+    60%{
+        background-color: rgb(254, 151, 151);
+    }
+    100%{
+        background-color: rgb(255, 242, 0);
+    }
+}
+
+@keyframes widthColorAnimate {
+    from{
+        width: 10px;
+        background-color: rgb(124, 255, 124);
+    }
+    to{
+        width: 400px;
+        background-color: rgb(129, 129, 255);
+    }
+}

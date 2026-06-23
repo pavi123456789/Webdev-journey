@@ -1,0 +1,108 @@
+/* Alpha vaue - sets the opacity of the color,
+           - range 0 to 1 
+           - rgba
+           - hexa
+*/
+
+/* Opacity - set opcaity of element 
+       - range 0 to 1 
+*/
+/* 
+    CSS transitions 
+    - needs a state change
+    1. transition-duration - set the time for which the duration will take from 0 to 100%
+    2. transition-delay - time fter which transiton will start
+    3. transition-timing-function - ways in which properties can change 
+                                - eg: linear, ease-in, ease, step-end, cubic-bezier
+    short hand -> transition: propertyName duration timing-function delay 
+*/
+
+/* 
+    CSS tranform
+    - to rotate, scale, skew, or translate an element 
+    - can be done on individual axises too x, y and z
+*/
+
+/* Box shadow : X-offset Y-offset blur-radius color
+*/
+
+
+
+
+div{
+    height: 200px;
+    width: 200px;
+    background-color: rgba(0, 255, 0, 0.5);
+    transition: 1s;
+    transition: border-radius 2s ease-in-out 0.2s;
+}
+
+#opacity{
+    opacity: 0.5;
+    background-color: rgb(0, 255, 0);
+    box-shadow: 2px 5px 10px blueviolet;
+}
+
+div:hover{
+    background-color: brown;
+    border-radius: 50%;  
+}
+
+h1{
+    transform: rotate(-90deg) scale(1.5);  
+}
+
+button{
+    transform: translateX(200px) skew(30deg);
+}
+
+/* background-image : url("xyz.abc")
+backgroud-size : contain / cover / auto */
+
+#backimg{
+    width: 600px;
+    height: 400px;
+    background-image:url("er.jpeg");
+    background-size: cover;
+    
+}
+
+/* 
+    Position
+    - top, botton, left and right dertermine final position
+    - static position -> default values, top, right, bottom, left, z-index have no efect
+    - relative position -> relative to its originl position
+    - absolute position -> positioned relative to its closest positoned ancestor
+    - fixed position -> relative to the initial containing block
+*/
+
+section div{
+    display: inline-block;
+}
+#static{
+    background-color: pink;
+    position: static;
+    top: 100px;
+    left: 100px;
+}
+
+#relative{
+    background-color: rgba(35, 101, 94, 0.466);
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+#absolute{
+    background-color: rgb(237, 255, 75);
+    position: absolute;
+    top: 100px;
+    left: 250px;
+}
+
+#fixed{
+    background-color: rgb(173, 122, 254);
+    position: fixed;
+    top: 100px;
+    left: 500px;
+}

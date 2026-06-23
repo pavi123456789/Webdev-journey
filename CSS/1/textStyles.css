@@ -1,0 +1,35 @@
+/* 
+    Text Properties
+    1.text-align -> start, end, center, justtified
+    2.font-weight -> normal(400), bold(700), 100 - 900, bolder, lighter
+    3.text-decoration -> for underline, overline, line-through of various types
+    4.line-height -> nrmal, x times normal -> gap between lines
+    5.letter-spacing -> noemal, x px
+    6.font-size ->(Absolute units) px (96px = 1 inch)
+                ->(Relative units) %, em, rem 
+    7.font-style -> a prioritized list of one or more font family names           
+*/
+
+h1{
+    text-align: center; /* w.r.t the parent element */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: red overline; /* mostly used to add underline, overline, or to remove the underline below anchor tag */
+}
+h2{
+    font-weight: 800; 
+    text-decoration:wavy line-through;
+    
+}
+h3{
+    text-decoration:dotted underline;
+    letter-spacing: 5px;
+}
+p{
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 25px;
+    font-family: script;
+}
+a{
+    text-decoration: none;
+}

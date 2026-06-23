@@ -1,0 +1,49 @@
+/* Media Queries
+-> how website will look on different devices
+
+Media Featuers
+- width (of viewport) ->
+    @media(width: value){ ---> for exclt vlalues
+        element{
+            style
+        }
+    } 
+    
+    @media(min-width: value){ --> or max-width
+        element{
+            style
+        }
+    }
+        
+    @media(max-width: value) and (max-width:value{ 
+        element{
+            style
+        }
+    } 
+- orientaion -> landspace, portrait
+
+*/
+
+h1{
+    border: 2px solid black;
+    background-color: yellow;
+}
+
+@media (min-width : 400px) and (max-width : 600px) {
+    h1{
+        background-color: red;
+        font-style: bold;
+    }
+    div{
+        height: 100px;
+        width: 200px;
+        background-color: pink;
+    }
+}
+
+@media (orientation: landscape){
+    h1{
+        background-color: aqua;
+    }
+}
+

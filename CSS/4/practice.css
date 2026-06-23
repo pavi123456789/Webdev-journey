@@ -1,0 +1,50 @@
+.card{
+    display: inline-block;
+    margin-left: 30px;
+    border-radius:10px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 4px 8px black;
+    transition: box-shadow 1s ;
+}
+img{
+    width:100%;
+    height:50%;
+    border-radius: 10px 10px 0 0;
+}
+.card:hover{
+    box-shadow: 2px 4px 16px goldenrod;
+}
+.desc{
+    padding: 0 2px 0 2px;
+}
+
+#face{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    background-color: rgb(253, 207, 57);
+}
+
+.eyes{
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    left: 15px;
+    margin-left: 40px;
+}
+
+
+#mouth{
+    width:100px;
+    height:50px;
+    border-radius: 0 0 50% 50%;
+    background-color: brown;
+    position: relative;
+    top: 40%;
+    left: 25%;
+}

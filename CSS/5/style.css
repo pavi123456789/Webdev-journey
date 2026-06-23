@@ -1,0 +1,68 @@
+/* Display-Flex
+- default drection = row
+- flex-direction : row/ column/ row-reverse/ column-reverse
+- justify-content -> distribution of space betweeen and around contetnt items along main-axis
+                  -> flex-end/ flex-start/ center/
+                  -> space-between/ space-around/ space-evenly
+- flex-wrap -> flex items are forced onto one line or can wrap
+- align-items -> distributes items along the cross axis
+              -> flex-start/ flex-end/ center/ baseline
+- align-content ->distribution of space between and around content items along cross axis
+                -> flex-end/ flex-start/ center/
+                -> space-between/ space-around/ space-evenly
+                -> baseline
+- align-self -> aligns item along the cross axis
+             -> flex-start/ flex-end/ center/ baseline
+             -> higher in priority than align-items
+
+-flex-basis - increases length along main axis
+-flex-grow - how much the flex contiainer's remaining space should be assigned to the flex item's main size
+-flex-shrink - how much item shrinks
+- shorthand -> flex: flex-grow flex-shrink flex-basis
+            -> flex: flex-grow flex-basis
+            -> flex: flex-basis
+            -> flex: flex-grow (if unitless)
+
+*/
+
+#container{
+    height:500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border:2px solid black;
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    /* align-items: baseline; */
+    /* align-content: flex-start; */
+    
+}
+
+h1{
+    text-align: center;
+}
+
+#container div{
+    height:50px;
+    width: 260px;
+    color: white;
+    text-align: center;
+    font-size: 1cm;
+}
+
+#violet{
+    align-self:flex-start;
+    flex-grow: 0.5;
+    max-height: 150px;
+}
+
+#indigo{
+    flex-basis: 500px;
+    flex: 2 2 500px
+}
+
+#orange{
+    flex-shrink:3 ;
+}

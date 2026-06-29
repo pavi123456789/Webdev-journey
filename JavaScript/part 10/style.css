@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+}
+div {
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.EB {
+    background-color: pink;
+    width: 400px;
+    height: 200px;
+}
+
+.EB ul {
+    background-color: blue;
+}
+
+.EB li {
+    background-color: greenyellow;
+}

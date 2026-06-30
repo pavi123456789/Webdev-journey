@@ -1,0 +1,15 @@
+1. Clone - cloning repos on our local machine
+        - git clone <-some link->
+
+2. status - displaythe state of the code
+        - git status
+
+3. add - adds new or changed files in your working directory to Git staging area
+        - git add <-file name->
+        - git add . = to add all
+
+4. commit - record of change
+        - git commit -m "some message"
+
+5. push - upload local repo content to remote repo
+        - git push origin main

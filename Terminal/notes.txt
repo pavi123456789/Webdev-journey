@@ -1,0 +1,40 @@
+ls - list files
+pwd = print working directory
+clear = clear session
+
+-----------------NAVIGATION----------------
+cd = change directory
+cd .. = back button
+cd ../..
+
+----------------PATHS-----------------
+1. Relative - cd Desktop/delta
+2. Absolute path - cd /c/Users/pavit/OneDrive/Documents
+/ = root directory
+~ = home directoryp
+
+-------------MAKING DIRECTORIES------------
+mkdir = make directory (create folder)
+
+--------------FLAGS-----------------------
+Flags - Characters that we pass with command to modify their behaviour
+
+Manual command - need  to install man
+To quit manual press q key
+man ls - give info about ls command
+man mkdir - give info about mkdir command
+Instead use ls --help, mkdir --help
+
+with Flags
+ls -l
+ls -a
+ls -la
+
+------------TOUCH COMMAND---------------
+touch - to create files
+
+
+------------DELETING FILES & FOLDERS-------------------
+rm = remove files
+rmdir = removes empty folders
+rm -rf = removes any folders

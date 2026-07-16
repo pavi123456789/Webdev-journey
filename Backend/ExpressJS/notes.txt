@@ -1,0 +1,9 @@
+Expess is a Node.js web application framework
+It is used for server side programming
+-> listen for incoming request
+-> parse the request
+-> match response with routes
+
+Framework = a set of pre wrtitten code that provides a structure for developing software application
+
+We use Nodemon , installed globally

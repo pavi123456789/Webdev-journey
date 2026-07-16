@@ -1,0 +1,28 @@
+---------------Templating---------------------
+->EJS(Rmbedded JavaScript template)
+-> EJS is a templating lang, to generate HTML markup with plain JavaScript
+
+-> require exprecess also requires ejs internaly
+
+-> need a folder named views whihc containd the view files of .ejs
+-> views gets searched from here the server as runned
+-> to fix this do app.set("views", pathjoin(__dirname, "/view"))
+-> path needs to be required
+
+
+----------------------Interpolation----------------
+
+---------------------------------------------------
+->ejs tage -> <%= variable %> :- Outputs the value of the expression into the template
+           -> <% code %>: Executes JavaScript code (for control flow like if statements or loops) without outputting anything to the HTML. 
+           -> <%- %>: Outputs the unescaped value into the tmeplate
+
+
+---------------------Serving Static Files----------
+-> to include css and js too
+-> app.use(express.static("public"));
+-> name has to be public , as it takes from that folder by default
+
+-------------Includes-------------------------------
+-> to add subtemplates
+-> <%- inslude("includes/head.ejs") %>

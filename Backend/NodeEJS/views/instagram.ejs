@@ -1,0 +1,23 @@
+<%- include("includes/head.ejs") %>
+<body>
+    <h1> <%= data.name %> </h2>
+    <button>Follow</button>
+    <button>Message</button>
+    <h3>Followers: <%= data.followers %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Following: <%= data.following %> </h3>
+    
+    <div>
+        <h3>Posts</h3>
+        <% for(let post of data.posts) { %>
+            <div>
+                <img src = "<%= post.image %>">
+                <h4>Likes: <%= post.likes %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comments: <%= post.comments %></h4>
+            </div>
+        <% } %>
+    </div>
+    
+    <%- include("includes/footer.ejs") %>
+
+
+<script src="/app.js"> </script> 
+</body>
+</html>

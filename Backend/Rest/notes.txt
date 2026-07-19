@@ -1,0 +1,43 @@
+-> Representational Sate Trasnfer
+-> architectural style that defines a set of constraints to be used for creating web services
+-> CRUD - create read update delete (from DBMS)
+
+----------Quora Eg--------------------------
+-> GET  -> /posts 
+        -> to get for all posts 
+        -> index(main) path
+
+-> POST -> / posts 
+        -> to add a new post 
+        -> create path
+        -> 2 routes
+            -> GET -> /posts/new -> Serve the from
+            -> POST -> /posts -> Add the new post
+
+-> GET  -> /posts/:id 
+        -> to get one post (using id) 
+        -> view path
+-> PATCH -> /posts/:id -> to update specific post -> update path
+-> Delete -> /posts/:id -> to delete specific post -> destroy path
+
+------UUID Package-------
+-> Universally unique identifier
+-> to create unique id for each post
+-> npm install uuid
+
+-----Form PATCH req----------
+-> forms can only send post or get req
+-> to send patch use package -> method-override
+
+-----To delete from array-----------
+-> .filter()
+-----------------------------------------------------------
+
+-> res.redirect(URL) -> to connect different pages
+
+req.params → identifying which thing (usually from the URL path, like /posts/:id)
+req.query → optional filters/options (like /posts?sort=newest)
+req.body → actual data payload being sent (create/update forms, JSON payloads)
+
+--------------------------------------------------------------------
+

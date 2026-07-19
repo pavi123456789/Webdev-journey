@@ -6,7 +6,22 @@
     <title>Get & Post Request</title>
 </head>
 <body>
-    
+    <h3>Get request form</h3>
+    <form method="get" action="http://localhost:8080/register">
+        <input placeholder="enter username" name="user" type="teatx" />
+        <input type="password" placeholder="enter password" name="'password" />
+        <button type="submit">Submit</button>
+    </form>
+    <!-- used to get some response -->
+    <!-- data sent in query strings (limited, string data & visible in url) -->
+    <h3>Post request form</h3>
+    <form method="post" action="http://localhost:8080/register">
+        <input placeholder="enter username" name="user" type="teatx" />
+        <input type="password" placeholder="enter password" name="'password" />
+        <button type="submit">Submit</button>
+    </form>
+    <!-- used for create/write/update -->
+    <!-- data sent via request body -->
 </body>
 </html>
 

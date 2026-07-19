@@ -1,0 +1,150 @@
+Schema -> design of database
+Tuple -> a single row in RDBMS table
+
+--------------MySQL command-------------
+--------Database-----
+-> create database db_name;
+-> CREATE DATABASE IF NOT EXISTX db_name;
+
+-> drop database db_name; (to delete)
+-> DROP DATABASE IF EXISTS db_name;
+
+->SHOW DATABASE
+
+-> use db_name;
+
+Sql is case insensitive lang
+
+----------Table----
+-> create table tb_name(
+    col-name1 datatype constraint,
+    col-name2 datatype constraint,
+    col-name3 datatype constraint,
+    col-name4 datatype constraint
+);
+
+-> INSERTT INTO table_name
+    (colname1, colnmae2)
+    VALUES
+    (col1_v1, col2_v1),
+    (col1_v2, col2_v2);
+
+
+-> SHOW TABLES;
+
+-> UPDATE table_name
+    SET col1 = val1, col2 = val2
+    WHERE condition;
+-> need to do :- SET SQL_SAFE_UPDATES = 0;
+
+-> DELETE FROM table_name
+    WHERE condition;
+
+Add col
+-> ALTER TABLE table_name
+    ADD COLUMN col_name datatype constraint;
+
+drop col
+->ALTER TABLE table_name
+    DROP COLUMN col_name;
+
+rename table
+-> ALTER TABLE table_name
+    RENMAE TO new_table_name
+
+rename column
+-> ALTER TABLE table_name
+    CHANGE COLUMN old_name new_name new_datatype new_constraint;
+
+modify column
+-> ALTER TABLE table_name
+    MODIFY col_name new_datatype new_constraint
+
+to empty table
+-> Truncate TABLE table_name;
+cant runcate a table if it has a foreign key link
+
+
+------Select command--------
+-> SELECT col1, col2 FROM table_name;
+
+to show all
+-> SELECT * FROM table_name;
+
+----Constraints-------
+-> not null
+-> unique
+-> default _no.
+-> check :- constraint check (age >= 18)
+-> Primary key :- makes a colmn unique & not null but used only for one
+                - primary key(col_name), col_name datatype primary key
+-> Foreign Key :- prevents actions that would destrop links between tables
+                -foreign key(col_name) reference tb_name(col_name)
+
+--------Datatypes------
+-> int
+-> tinyint :- (-128 to 127)
+-> bigint
+-> bit(2)
+-> float
+-> double
+-> boolean
+-> date :- YYYY-MM-DD
+-> varchar(3) :- string (0-255 characters)
+-> char(3) :- string (0-255 characters)
+-> blob(200) :- string (0 - 65535 charcters)
+
+
+------WHERE CLAUSE-----
+-> SELECT col1, col2 FROM table_name
+    WHERE condition;
+
+----Operators---------
+-> Arithmatic -> +, -, *, /, %
+-> Comparison -> =, !=, >, >=, < , <=
+-> Logical -> AND, OR, NOT, IN, BETWEEN, ALL, LIKE, ANY
+-> Bitwise -> &, |
+
+-----LIMIT CLAUSE------
+Sets an upper limit on number of tuples to be returned
+-> SELECT col1, col2 FROM table_name
+    LIMIT number;
+
+-----ORDER by CLAUSE------
+To sort in ascending(ASC) or descending order (DESC)
+-> SELECT col1, col2 FROM table_name
+    ORDER BY col_name(s) ASC;
+
+-----AGGREGATE FUNC------
+Perform a calculation on a set of values and returns a single value.
+-> COUNT()
+-> MAX()
+-> MIN()
+-> SUM()
+-> AVG()
+
+---Group by CLAUSE-----
+Groups rows that have the same values into summaray rows.
+It collects data from multiple records and groups the result by one or maore column.
+Generaly use with some aggregate func
+
+-> SELECT col1, col2 FROM table_name
+    GROUP BY col_name(s);
+
+If we want to print a col beside aggregate function then we need to make a group by that col
+
+--------HAVING CLAUSE--------
+Similar to WHERE, but used when we want to apply any condition after grouping
+Grouping is necessary for HAVING
+
+-> SELECT col1, col2 FROM table_name
+    GROUP BY col_name(s)
+    HAVING condition;
+
+----General Order-------
+SELECT col(s)
+FROM table_name
+WHERE condition
+GROUP BY col(s)
+HAVING condition
+ORDER BY col(s) ASC

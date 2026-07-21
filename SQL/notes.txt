@@ -148,3 +148,17 @@ WHERE condition
 GROUP BY col(s)
 HAVING condition
 ORDER BY col(s) ASC
+
+----------To use with Node------------------------------------
+-> Faker  package (@faker-js/faker)
+    -> to generate fake data
+-> MySQL2 Package 
+    -> to connect Node with MySQL
+    -> connection.end();
+    -> connection.query();
+    -> To use sql command on terminal
+        -> "/c/Program Files/MySQL/MySQL Server 8.0/bin/mysql" -u root -p
+
+-> create schema.sql file
+    -> do :- "/c/Program Files/MySQL/MySQL Server 8.0/bin/mysql" -u root -p
+    -> source schema.sql

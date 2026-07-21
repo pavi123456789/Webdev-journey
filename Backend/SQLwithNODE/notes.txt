@@ -1,0 +1,14 @@
+-> GET -> / 
+        -> show no. of users in database
+
+-> GET -> /user 
+        -> show users(email, id, username)
+
+-> PATCH -> /user/:id 
+         -> username edit
+
+-> POST -> /user
+        -> add new user
+
+-> DELETE -> /user/:id
+          -> delete user

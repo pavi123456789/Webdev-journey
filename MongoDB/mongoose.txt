@@ -1,0 +1,121 @@
+----------------------MONGOOSE---------------------------------------------------
+-> library that creates a cnnection btwn MongoDB & Node.js
+-> its an ODM (Object Data Modeling) library
+
+To connect with node.js
+-> const mongoose = require('mongoose');
+-> mongoose.connect('mongodb://127.0.0.1:27017/test'); 
+    -> this return a Promise
+    -> same as 
+        -> async function main() {
+                await mongoose.connect('mongodb://127.0.0.1:27017/test');
+            }
+    -> to check connection do 
+        -> write the await function 
+            -> main()
+                .then(() => {
+                    console.log('successfull');
+                })
+                .catch((err)=> console.log(err));
+
+-> uses Operation Buffering
+    i.e. mongoose lets you start using your models immediately, without waiting
+    for mongoose to establish a connection to MongoDB
+-------------Schema---------------------
+Defines the shape 
+-> const schema_name = new mongoose.Schema({
+        key : datatype,
+        key : datatype
+    })
+
+Permited Datatypes (start with capital letter)
+-> String
+-> Nummber
+-> Date 
+-> Buffer
+-> Boolean
+-> Mixed
+-> Objected
+-> Array
+-> uuid
+-> Map
+-> Decimal128
+
+
+-----------------Models-----------------------
+class with which we construct documents
+
+To create a collection
+-> const model_name = mongoose.model('model_name', schema_name);
+
+model_name should be singular and start with capital letter,
+bcoz mongoDB turn the name to prular and all lowercase
+eg. User -> users, Product -> products
+
+
+-------------INSERT-----------------------------
+Inserting one
+-> const user1 = new model_name({key: value});
+-> user1.save()
+
+.save is also an async function , it return a promise
+
+Insert many
+-> User.insertMany([
+        {}, 
+        {}
+    ])
+
+
+-----------------FIND----------------------------
+-> model_name.find()
+-> model_name.findById()
+-> model_name.findOne()
+
+these return a Query
+even if they are not Promises, they have a .then()
+
+-----------------UPDATE--------------------------
+-> model_name.updateOne()
+-> model_name.updateMany()
+
+returns a Query
+
+to find and then update, prints the original one then updates
+-> model_name.findOneAndUpdate()
+-> model_name.finsByIdAndUpdate()
+
+to print udpated
+-> <options> = {new: true}
+-> <options> = {returnDocument: 'after'}
+
+these also return Query
+
+----------DELETE--------------------------
+-> model_name.deleteOne(<filter>)
+-> model_name.deleteMany(<filter>)
+
+return Query
+
+same as in update, to see what we have deleted 
+-> model_name.findByIdAndDelete()
+-> model_name.findOneAndDelete()
+
+
+----------- Schema Validations -------------------------
+rules for schemna, i.e constraints
+-> required : true
+-> min:
+-> enum
+
+this rules only work at the time of insertion
+While updating they dont
+
+to keep the contraints while updatind
+-> <option> = {runvalidators: true}
+
+--------Handeling error------------
+in constarint you can write custom err msg
+eg -> min : [1, 'new error message']
+
+to access the exct error-> err.errors.category_name.properties.message

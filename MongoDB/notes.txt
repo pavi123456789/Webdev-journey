@@ -1,0 +1,64 @@
+-> mongosh // to start shell
+-> use  database_name // to cerate & use new database 
+-> show collections
+-> show dbs // shows all databases
+
+-> In Mongo data is stored in form of BSON document
+BSON data
+-> Binary JSON
+-> JSON -> text basedd
+        -> spce inefficeint
+
+-> Stores documents in collection
+
+--------INSERT ONE in DB--------------
+-> db.collection_name.insertOne()
+-> if not collection present this creates a collection too
+
+-----INSERT MANY in DB----------------------
+-> db.collection_name.insertMany([]);
+-> pass array of objects
+
+-------FIND in DB--------------------------------
+-> db.collection_name.find() // returns everything
+
+for specific quries
+-> db.collection_name.find({key: value}); // returns a cursor , which is a reference to origin
+-> db.collection_name.findOne({key : value}); // return actual document
+
+Find Operators
+-> marks > 75 -> {marks: {$gt: 75}}
+-> city = delhi or mumbi -> {city: {$in: ['Delhi', 'Mumbai']}}
+
+---------UPDATE in DB-----------------------
+-> db.collection_name.updateOne( <filter>, <update>, <options>)
+-> db.collection_name.updateMany( <filter>, <update>, <options>)
+-> dp.collection_name.replacOne(<filter>, <new document>)
+Update Operators
+-> Set operator -> {&set :{key: value} } 
+-> Add new field -> {$addFields: {kaye: value, key: value}}
+-> $project
+-> $unset
+-> $replaceRoot
+-> replaceWith
+
+---------NESTING--------------
+  _id: ObjectId('6a60bf0324b4b6b33189fa55'),
+  name: 'farah',
+  performance: { marks: 88, grade: 'A+' }
+
+  db.student.findOne({'performance.marks' : 88})
+
+----------DELETE in DB------------
+delete one 
+->db.collection_name.deleteOne(<filter>, <options>)
+
+delete many
+-> db.collection_name.deleteMany(<filter>, <option>)
+
+delete all
+-> db.collection_name.deleteMany({})
+delete database
+-> db.dropDatabase()
+
+
